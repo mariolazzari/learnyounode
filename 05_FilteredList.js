@@ -1,5 +1,6 @@
 // filtered list
 var fs = require('fs');
+var path = require('path');
 
 // check parameters
 if(process.argv.length < 4){
@@ -14,14 +15,9 @@ fs.readdir(folder, (err, list) =>{
     if(err) return console.log(err);
     
     // list file filtered by extension
-    var files = list.filter(f => f.endsWith('.' + filter));
-    
-    for(var i = 0; i < files.length; i++){
-        console.log(files[i]);
-    }    
+    var files = list.filter(f => path.extname(f) === "." + filter);
+    files.forEach(file => console.log(file));    
 })
-
-
 
 
 // versione ufficiale
