@@ -7,14 +7,14 @@ var ext = process.argv[3]
 
 // call module
 myModule(folder, ext, (err, data) => {
-    
-    // on error
-    if(err) {
-        return console.log(err);
-    }
 
-    // print result
-    data.forEach(file => console.log(file));
+  // on error
+  if (err) {
+    return console.log(err);
+  }
+
+  // print result
+  data.forEach(file => console.log(file));
 });
 
 // soluzione

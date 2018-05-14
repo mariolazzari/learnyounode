@@ -1,0 +1,19 @@
+{
+  "name": "learnyounode",
+  "version": "1.0.0",
+  "description": "Learn you node code school tutorial",
+  "main": "01_program.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariolazzari/learnyounode.git"
+  },
+  "author": "Mario Lazzari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariolazzari/learnyounode/issues"
+  },
+  "homepage": "https://github.com/mariolazzari/learnyounode#readme"
+}
