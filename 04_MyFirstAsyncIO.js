@@ -1,11 +1,18 @@
 // my first async I/O
-var fs = require('fs');
-var fileName = process.argv[2];
+const fs = require("fs");
+
+const fileName = process.argv[2];
+if (!fileName) {
+  return console.log("Please provide a file name");
+}
 
 fs.readFile(fileName, "utf8", (err, data) => {
-    // on error
-    if (err) return console(err);
+  // on error
+  if (err) {
+    return console(err);
+  }
 
-    // read async
-    console.log(data.split('\n').length - 1);
+  // read async
+  const lines = data.split("\n").length - 1;
+  console.log(lines);
 });

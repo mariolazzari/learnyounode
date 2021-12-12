@@ -1,9 +1,9 @@
 // line arguments
-var sum = 0;
-var args = process.argv;
+let sum = 0;
+const { argv } = process;
 
-for (var i = 2; i < args.length; i++) {
-    sum += Number(args[i]);
+for (let i = 2; i < argv.length; i++) {
+  sum += +argv[i];
 }
 
 console.log(sum);
