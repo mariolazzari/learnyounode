@@ -18,5 +18,5 @@ fs.readdir(folder, (err, list) => {
 
   // list file filtered by extension
   const files = list.filter(f => path.extname(f) === filter);
-  files.forEach(console.log);
+  files.forEach(f => console.log(f));
 });

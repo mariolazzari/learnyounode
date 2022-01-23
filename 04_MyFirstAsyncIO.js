@@ -9,7 +9,7 @@ if (!fileName) {
 fs.readFile(fileName, "utf8", (err, data) => {
   // on error
   if (err) {
-    return console(err);
+    return console.error(err);
   }
 
   // read async
