@@ -1,28 +1,12 @@
 // http client
-var http = require('http');
+const http = require("http");
 
-http.get(process.argv[2], res => {
+const req = process.argv[2];
+
+http
+  .get(req, res => {
     res.setEncoding("utf8");
-
-    res.on("error", err => {
-        console.log(err);
-    });
-
-    res.on("data", data => {
-        console,log(data.toString().length);
-        //console.log(data);
-    });
-
-}).on('error', console.error);
-
-/* soluzione
-
-  var http = require('http')
-
-    http.get(process.argv[2], function (response) {
-      response.setEncoding('utf8')
-      response.on('data', console.log)
-      response.on('error', console.error)
-    }).on('error', console.error)
-}
-*/
+    res.on("error", err => console.log(err));
+    res.on("data", data => console.log(data.toString().length));
+  })
+  .on("error", console.error);

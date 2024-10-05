@@ -1,7 +1,7 @@
 {
   "name": "learnyounode",
   "version": "1.0.0",
-  "description": "Learn you node code school tutorial",
+  "description": "Learn the basics of node: asynchronous i/o, http.",
   "main": "01_program.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
